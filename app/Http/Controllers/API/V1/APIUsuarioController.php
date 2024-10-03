@@ -43,7 +43,13 @@ class APIUsuarioController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $u = Usuario::find($id);
+
+        if ($u) {
+            return $u;
+        }
+
+        return Response()->json([], 404);
     }
 
     /**

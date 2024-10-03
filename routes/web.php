@@ -20,3 +20,4 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/api/v1/usuarios',[APIUsuarioController::class, 'index'])->name('api.usuarios.index');
+Route::get('/api/v1/usuarios/{id}',[APIUsuarioController::class, 'show'])->name('api.usuarios.show');
