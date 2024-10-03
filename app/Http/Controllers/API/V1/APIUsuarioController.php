@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\API\V1;
 
 use App\Http\Controllers\Controller;
+use App\Models\Usuario;
+use GuzzleHttp\Psr7\Response;
 use Illuminate\Http\Request;
 
 class APIUsuarioController extends Controller
@@ -12,7 +14,12 @@ class APIUsuarioController extends Controller
      */
     public function index()
     {
-        //
+        $usuarios = Usuario::get();
+
+
+        return $usuarios;
+
+        // return Response()->json($usuarios, 200);
     }
 
     /**
